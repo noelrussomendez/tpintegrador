@@ -1,0 +1,102 @@
+.body {
+    background-color: #212121;
+}
+
+/* falta que se pongan a la derecha */
+
+.flex {
+    display: flex;
+}
+
+.main {
+    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2%;
+}
+
+.listas{
+    margin-left: 80px;
+    text-decoration: none;
+}
+
+.oneclick {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;  
+}
+
+.main_opciones {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: white;
+    justify-content: space-around;
+    margin-left: 100%;
+    text-decoration: none;
+
+}
+
+li {
+    justify-items: center;
+    margin: 0px;
+}
+
+.p {
+    color: white;
+}
+
+.titulo {
+    color: white;
+    font-family: sans-serif;
+}
+
+.principal {
+    color: white;
+}
+
+.containerfirst {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2%;
+    padding: 0%;
+}
+
+.containersecond {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2%;
+    padding: 0%;
+}
+
+.containerthird {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2%;
+    padding: 0%;
+}
+
+.containerfour {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2%;
+    padding: 0%;
+}
+
+.footer {
+    color: white;
+}
