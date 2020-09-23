@@ -8,18 +8,9 @@
     display: flex;
 }
 
-.main {
-    width: 45%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
+.section_derecha{
     flex-direction: row;
-    padding: 2%;
+    justify-content: flex-end;
 }
 
 .listas{
@@ -30,9 +21,12 @@ nav {
 .oneclick {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     color: white;
     list-style: none;
+    justify-content: flex-start;
+}
+.main{
+    width: 45%;
 }
 
 a {
@@ -41,19 +35,13 @@ a {
 }
 
 .main_opciones {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    color: white;
-    justify-content: space-around;
-    margin-left: 100%;
-    text-decoration: none;
-
-}
-
-li {
-    justify-items: center;
-    margin: 0px;
+ display: flex;
+ justify-content: space-around;
+ flex-direction: row;
+ list-style: none;
+ color: white;
+ justify-content: flex-end;
+ text-decoration: none; 
 }
 
 .p {
