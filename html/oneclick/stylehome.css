@@ -18,16 +18,7 @@
     text-decoration: none;
 }
 
-.oneclick {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    list-style: none;
-    justify-content: flex-start;
-}
-.main{
-    width: 45%;
-}
+
 
 a {
     text-decoration: none;
