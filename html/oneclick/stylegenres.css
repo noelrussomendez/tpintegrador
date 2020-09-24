@@ -9,13 +9,13 @@ nav {
     align-items: center;
     text-decoration: none;
     color: white; 
+    border-bottom: 1px solid rgba(190, 30, 190, 0.781);
 }
 
 
 .logo {
     display: flex;
     justify-content: flex-start;
-    
 }
 
 .main {
@@ -31,6 +31,7 @@ nav {
 
 .opciones {
     margin-right: 20px;
+    
 }
 
 .p {
