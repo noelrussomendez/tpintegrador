@@ -37,6 +37,7 @@ nav {
 h2 {
     color: white;
     font-weight: 500;
+    font-weight: bold;
 }
 
 p {
@@ -51,9 +52,25 @@ p {
 
 .imagen{
    align-content: center;
+   display: grid;
+   align-items: center;
+   border: solid #212121;
+   padding: 16px;
+   background: #212121;
 }
-.imagen {
+.costado{
+    display: grid;
     align-items: center;
+    border: solid #212121;
+    padding: 0px;
+    background: #212121;
+    position: absolute;
+    right: 150px;
+    width: 200px;
+}
+.elenco{
+    align-self: flex-end;
+    padding-top: 30px;
 }
 
 footer {
@@ -66,4 +83,12 @@ footer {
     align-items: center;
     text-decoration: none;
     color: white; 
+}
+.info{
+    background-color:#212121;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    border: solid grey;
+    padding: 16px;
 }
