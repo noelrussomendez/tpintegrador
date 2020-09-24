@@ -2,37 +2,35 @@
     background-color: #212121;
 }
 
-/* falta que se pongan a la derecha */
-
-.flex {
+nav {
     display: flex;
-}
-
-.section_derecha{
+    justify-content: space-between;
     flex-direction: row;
-    justify-content: flex-end;
-}
-
-.listas{
-    margin-left: 80px;
+    align-items: center;
     text-decoration: none;
+    color: white; 
 }
 
 
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    
+}
 
-a {
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0%;
     text-decoration: none;
-    color: white;  
+    color: white; 
+    list-style: none;
 }
 
-.main_opciones {
- display: flex;
- justify-content: space-around;
- flex-direction: row;
- list-style: none;
- color: white;
- justify-content: flex-end;
- text-decoration: none; 
+.opciones {
+    margin-right: 20px;
 }
 
 .p {
