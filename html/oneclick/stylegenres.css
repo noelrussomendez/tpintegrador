@@ -51,6 +51,7 @@ h2 {
 .titulo {
     color: white;
     font-family: sans-serif;
+    text-align: center;
 }
 
 .containerGenres {
