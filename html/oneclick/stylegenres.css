@@ -82,3 +82,15 @@ h2 {
 footer {
     color: white;
 }
+
+footer {
+    color: white;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: white; 
+}
