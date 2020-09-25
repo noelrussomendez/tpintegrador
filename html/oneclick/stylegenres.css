@@ -93,4 +93,5 @@ footer {
     align-items: center;
     text-decoration: none;
     color: white; 
+    border-top: 1px solid rgba(190, 30, 190, 0.781);
 }
