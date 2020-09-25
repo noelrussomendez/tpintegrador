@@ -33,6 +33,12 @@ nav {
     margin-right: 20px;
 }
 
+.main a {
+    color: white;
+    text-decoration: none;
+    font-size: 95%;
+}
+
 .p {
     color: white;
 }
@@ -42,11 +48,17 @@ nav {
     font-family: sans-serif;
 }
 
+.titulo a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
 .principal {
     color: white;
 }
 
-.containerfirst {
+.containerHome {
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 2%;
@@ -54,28 +66,16 @@ nav {
     margin-bottom: 4%;
 }
 
-.containersecond {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 2%;
-    padding: 0%;
-    margin-bottom: 4%;
-}
-
-.containerthird {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 2%;
-    padding: 0%;
-    margin-bottom: 4%;
-}
-
-.containerfour {
+.containerFour {
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 2%;
     padding: 0%;
     margin-bottom: 5%;
+}
+
+.media img {
+    width: 100%;
 }
 
 footer {

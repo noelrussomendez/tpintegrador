@@ -34,6 +34,12 @@ nav {
     margin-right: 20px;
 }
 
+.main a {
+    color: white;
+    text-decoration: none;
+    font-size: 95%;
+}
+
 h2 {
     color: white;
     font-weight: 500;
@@ -73,6 +79,16 @@ p {
     padding-top: 30px;
 }
 
+
+.info{
+    background-color:#212121;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    border: solid grey;
+    padding: 16px;
+}
+
 footer {
     color: white;
     font-size: 15px;
@@ -83,12 +99,29 @@ footer {
     align-items: center;
     text-decoration: none;
     color: white; 
+    margin-top: 70px;
+   
 }
-.info{
-    background-color:#212121;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    border: solid grey;
-    padding: 16px;
+
+.ultimalinea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0%;
+    text-decoration: none;
+    color: white; 
+    list-style: none;
+    
+}
+
+.copy {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.ult {
+    margin-right: 20px;
+    
 }

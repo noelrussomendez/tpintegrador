@@ -34,6 +34,12 @@ nav {
     
 }
 
+.main a {
+    color: white;
+    text-decoration: none;
+    font-size: 95%;
+}
+
 .p {
     color: white;
 }
@@ -47,7 +53,7 @@ h2 {
     font-family: sans-serif;
 }
 
-.containercomedia{
+.containerGenres {
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 2%;
@@ -55,32 +61,8 @@ h2 {
     margin-bottom: 5%;
 }
 
-.containerinfantiles{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 2%;
-    padding: 0%;
-    margin-bottom: 5%;
-}
-
-.containerdrama{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 2%;
-    padding: 0%;
-    margin-bottom: 5%;
-}
-
-.containerterror{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 2%;
-    padding: 0%;
-    margin-bottom: 5%;
-}
-
-footer {
-    color: white;
+.media img {
+    width: 100%;
 }
 
 footer {
@@ -94,4 +76,24 @@ footer {
     text-decoration: none;
     color: white; 
     border-top: 1px solid rgba(190, 30, 190, 0.781);
+}
+
+.ultimalinea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0%;
+    text-decoration: none;
+    color: white; 
+    list-style: none;
+}
+
+.copy {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ult {
+    margin-right: 20px;
 }
