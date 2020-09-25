@@ -47,28 +47,7 @@ h2 {
     font-family: sans-serif;
 }
 
-.conteinercomedia{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 2%;
-    padding: 0%;
-    margin-bottom: 5%;
-}
-.conteinerinfantiles{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 2%;
-    padding: 0%;
-    margin-bottom: 5%;
-}
-.conteinerdrama{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 2%;
-    padding: 0%;
-    margin-bottom: 5%;
-}
-.conteinerterror{
+.containercomedia{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 2%;
@@ -76,6 +55,29 @@ h2 {
     margin-bottom: 5%;
 }
 
+.containerinfantiles{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2%;
+    padding: 0%;
+    margin-bottom: 5%;
+}
+
+.containerdrama{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2%;
+    padding: 0%;
+    margin-bottom: 5%;
+}
+
+.containerterror{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2%;
+    padding: 0%;
+    margin-bottom: 5%;
+}
 
 footer {
     color: white;
