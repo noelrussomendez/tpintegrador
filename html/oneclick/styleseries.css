@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://www.telam.com.ar/advf/imagenes/2018/11/5be2e6af5d00d_1004x565.jpg);
+    background-image: url(http://htc-wallpaper.com/wp-content/uploads/2013/09/breaking-bad1.jpg);
     background-size: cover;
 }
 
@@ -11,7 +11,6 @@ nav {
     text-decoration: none;
     color: white; 
 }
-
 
 .logo {
     display: flex;
@@ -39,8 +38,9 @@ nav {
     text-decoration: none;
     font-size: 95%;
 }
-.imagen{
-    width: 10px;
+
+.imagen img{
+    width: 100%;
 }
 
 h2 {
@@ -60,44 +60,28 @@ p {
     font-family: sans-serif;
 }
 
-.imagen{
-   align-content: center;
-   display: grid;
-   align-items: center;
-   border: solid #212121;
-   padding: 16px;
-   background: #212121;
-   
-}
-.costado{
+.gridContainer {
+    background-color: #212121;
     display: grid;
-    align-items: center;
-    border: solid #212121;
-    padding: 0px;
-    background: #212121;
-    position: absolute;
-    right: 540px;
-    width: 200px;
-  
-}
-.elenco{
-    align-self: flex-end;
-    padding-top: 30px;
-}
-
-
-.info{
-    background-color:#212121;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;   
     gap: 30px;
     border: solid grey;
     padding: 16px;
-    margin-left: 10% ;
-    margin-right: 10%;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    
+    margin-left: 15% ;
+    margin-right: 15%;
+    margin-bottom: 4%;
+    margin-top: 1%;
+}
+
+.gridMenu {
+    display: grid;
+    grid-template-columns: 1fr ;
+    align-self: center;
+    text-align: center;
+}
+
+.gridContainer img {
+    width: 100%;
 }
 
 footer {
