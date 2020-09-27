@@ -105,7 +105,7 @@ footer {
     align-items: center;
     text-decoration: none;
     color: white; 
-    background-color:#212121;
+    background: linear-gradient(rgba(44, 44, 44, 0),#212121d2);
    
 }
 
@@ -121,7 +121,7 @@ footer {
     
 }
 .cabecera{
-    background-color:#212121;
+    background: linear-gradient(#212121d2,rgba(44, 44, 44, 0));
 }
 
 .copy {
