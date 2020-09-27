@@ -45,6 +45,7 @@ h2 {
     color: white;
     font-weight: 500;
     font-weight: bold;
+    text-align: center;
 }
 
 p {
@@ -73,7 +74,7 @@ p {
     padding: 0px;
     background: #212121;
     position: absolute;
-    right: 150px;
+    right: 540px;
     width: 200px;
   
 }
@@ -90,6 +91,10 @@ p {
     gap: 30px;
     border: solid grey;
     padding: 16px;
+    margin-left: 10% ;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
     
 }
 
