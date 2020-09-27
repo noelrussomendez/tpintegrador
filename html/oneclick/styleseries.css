@@ -10,7 +10,6 @@ nav {
     align-items: center;
     text-decoration: none;
     color: white; 
-    border-bottom: 1px solid rgba(190, 30, 190, 0.781);
 }
 
 
@@ -39,6 +38,9 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 95%;
+}
+.imagen{
+    width: 10px;
 }
 
 h2 {
@@ -108,7 +110,6 @@ footer {
     align-items: center;
     text-decoration: none;
     color: white; 
-    border-top: 1px solid rgba(190, 30, 190, 0.781);
     background-color:#212121;
    
 }
