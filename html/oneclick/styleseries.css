@@ -53,6 +53,7 @@ h2 {
 p {
     color: white;
     font-family: sans-serif;
+    text-align: start;
 }
 
 .titulo {
