@@ -1,7 +1,10 @@
 body {
     background-image: url(http://images.fanpop.com/images/image_uploads/Charlie-the-Chocolate-Factory-tim-burton-169397_800_600.jpg);
+    
     background-size: cover;
 }
+
+
 
 nav {
     display: flex;
@@ -49,6 +52,7 @@ h2 {
 p {
     color: white;
     font-family: sans-serif;
+    text-align: start;
 }
 
 .titulo {
