@@ -113,15 +113,14 @@ footer {
 }
 
 
-/* desktop first */
+/* Mobile */
 
-
- 
 @media (max-width:420px) {
 
 .main{
     display: block;
-}
+}   
+
 
 .principal {
     text-align: left;
@@ -143,6 +142,25 @@ footer {
 
 .titulo {
     display: none;
+}
+
+footer {
+    display: block;
+}
+
+.copy {
+    display: block;
+    text-align: center;
+}
+
+.nosotras {
+    display: block;
+    text-align: center;
+}
+
+.ultimalinea {
+    display: block;
+    text-align: center;
 }
 
 }
