@@ -1,4 +1,4 @@
-.body {
+body {
     background-color: #212121;
 }
 
@@ -9,13 +9,14 @@ nav {
     align-items: center;
     text-decoration: none;
     color: white; 
+    border-bottom: 1px solid rgba(190, 30, 190, 0.781);
 }
 
 
 .logo {
     display: flex;
     justify-content: flex-start;
-    
+    max-width: 150px;
 }
 
 .main {
@@ -43,6 +44,10 @@ nav {
     color: white;
 }
 
+h2 {
+    color: white;
+}
+
 .titulo {
     color: white;
     font-family: sans-serif;
@@ -55,24 +60,12 @@ nav {
     font-family: sans-serif;
 }
 
-.principal {
-    color: white;
-}
-
-.containerHome {
+.containerContent {
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 2%;
     padding: 0%;
     margin-bottom: 4%;
-}
-
-.containerFour {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 2%;
-    padding: 0%;
-    margin-bottom: 5%;
 }
 
 .media img {
@@ -113,57 +106,6 @@ footer {
 }
 
 
-/* Mobile */
-
-@media (max-width:420px) {
-
-    .main{
-        display: block;
-    }   
-
-
-    .principal {
-        text-align: left;
-    }
-
-    .containerHome {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .containerFour {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .media img {
-        width: 100%;
-    }
-
-    .titulo {
-        display: none;
-    }
-
-    footer {
-        display: block;
-    }
-
-    .copy {
-        display: block;
-        text-align: center;
-    }
-
-    .nosotras {
-        display: block;
-        text-align: center;
-    }
-
-    .ultimalinea {
-        display: block;
-        text-align: center;
-    }
-
-}
-
-
 /* Tablet */
 
 @media (max-width: 768px) {
@@ -180,10 +122,6 @@ footer {
         grid-template-columns: repeat(4,1fr);
     }
     
-    .containerFour {
-        grid-template-columns: repeat(4,1fr);
-    }
-    
     .media img {
         width: 100%;
     }
@@ -207,3 +145,20 @@ footer {
     }
 
 }
+
+/* Mobile */
+
+@media (max-width:420px) {
+
+    .containerHome {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .ultimalinea {
+        display: block;
+        text-align: center;
+    }
+
+}
+
+

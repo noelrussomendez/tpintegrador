@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: #212121;
 }
 
@@ -16,9 +16,9 @@ nav {
 .logo {
     display: flex;
     justify-content: flex-start;
-}
+} */
 
-.main {
+/* .main {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -27,14 +27,13 @@ nav {
     text-decoration: none;
     color: white; 
     list-style: none;
-}
-
+} */
+/* 
 .opciones {
     margin-right: 20px;
-    
-}
+} */
 
-.main a {
+/* .main a {
     color: white;
     text-decoration: none;
     font-size: 95%;
@@ -42,27 +41,27 @@ nav {
 
 .p {
     color: white;
-}
-
+} */
+/* 
 h2 {
     color: white;
-}
-
+} */
+/* 
 .titulo {
     color: white;
     font-family: sans-serif;
     text-align: center;
-}
+} */
 
-.containerGenres {
+/* .containerGenres {
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 2%;
     padding: 0%;
     margin-bottom: 5%;
-}
+} */
 
-.media img {
+/* .media img {
     width: 100%;
 }
 
@@ -77,9 +76,9 @@ footer {
     text-decoration: none;
     color: white; 
     border-top: 1px solid rgba(190, 30, 190, 0.781);
-}
+} */
 
-.ultimalinea {
+/* .ultimalinea {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -88,16 +87,16 @@ footer {
     text-decoration: none;
     color: white; 
     list-style: none;
-}
+} */
 
-.copy {
+/* .copy {
     display: flex;
     justify-content: flex-start;
-}
-
+} */
+/* 
 .ult {
     margin-right: 20px;
-}
+} */
 
 /* Mobile */
 
