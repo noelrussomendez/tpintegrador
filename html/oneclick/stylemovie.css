@@ -1,5 +1,5 @@
 body {
-    background-image: url(http://images.fanpop.com/images/image_uploads/Charlie-the-Chocolate-Factory-tim-burton-169397_800_600.jpg);
+    background-image: url("../imagenes/charliefondo.jpeg");
     
     background-size: cover;
 }
