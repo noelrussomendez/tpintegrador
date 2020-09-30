@@ -2,6 +2,14 @@ body {
     background-color: #212121;
 }
 
+.movieDetail{
+    background-image: url("../imagenes/charliefondo.jpeg");
+    background-size: cover;
+}
+.cabecera{
+    background: linear-gradient(#212121d2,rgba(44, 44, 44, 0));
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -103,6 +111,42 @@ footer {
 
 .ult {
     margin-right: 20px;
+}
+
+/* Movie detail */
+.movieDetail h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.movieDetail p {
+    color: white;
+    font-family: sans-serif;
+    text-align: start;
+}
+
+.gridContainer {
+    background-color: #212121;
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    gap: 30px;
+    border: solid grey;
+    padding: 16px;
+    margin-left: 15% ;
+    margin-right: 15%;
+    margin-bottom: 4%;
+    margin-top: 1%;
+}
+
+.gridMenu {
+    display: grid;
+    grid-template-columns: 1fr ;
+    align-self: center;
+    text-align: center;
+}
+
+.gridContainer img {
+    width: 100%;
 }
 
 
