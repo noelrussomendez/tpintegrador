@@ -1,11 +1,8 @@
 body {
     background-color: #212121;
+    margin: 0;
 }
 
-.movieDetail{
-    background-image: url("../imagenes/charliefondo.jpeg");
-    background-size: cover;
-}
 .cabecera{
     background: linear-gradient(#212121d2,rgba(44, 44, 44, 0));
 }
@@ -48,7 +45,7 @@ nav {
     font-size: 95%;
 }
 
-.p {
+p {
     color: white;
 }
 
@@ -91,6 +88,7 @@ footer {
     text-decoration: none;
     color: white; 
     border-top: 1px solid rgba(190, 30, 190, 0.781);
+    background: linear-gradient(rgba(44, 44, 44, 0), #212121d2);
 }
 
 .ultimalinea {
@@ -114,12 +112,17 @@ footer {
 }
 
 /* Movie detail */
-.movieDetail h2 {
+.movie{
+    background-image: url("../imagenes/charliefondo.jpeg");
+    background-size: cover;
+}
+
+.detail h2 {
     color: white;
     font-weight: bold;
 }
 
-.movieDetail p {
+.detail p {
     color: white;
     font-family: sans-serif;
     text-align: start;
@@ -149,6 +152,11 @@ footer {
     width: 100%;
 }
 
+/* Serie detail */
+.serie{
+    background-image: url('http://htc-wallpaper.com/wp-content/uploads/2013/09/breaking-bad1.jpg');
+    background-size: cover;
+}
 
 /* Tablet */
 
