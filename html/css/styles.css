@@ -208,6 +208,8 @@ footer {
 
     .containerContent {
         grid-template-columns: repeat(2,1fr);
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
 
     .ultimalinea {
