@@ -173,6 +173,10 @@ footer {
     .containerContent {
         grid-template-columns: repeat(4,1fr);
     }
+
+    .gridContainer{
+        grid-template-columns: 1fr;
+    }
     
     .media img {
         width: 100%;
