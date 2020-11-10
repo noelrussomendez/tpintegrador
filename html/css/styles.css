@@ -89,7 +89,7 @@ h2 {
     height: 700px;
 }
 
-/* Carrusel */
+/* Termina carrusel */
 
 .containerContent {
     display: grid;
@@ -117,18 +117,6 @@ footer {
     background: linear-gradient(rgba(44, 44, 44, 0), #212121d2);
 }
 
-.facebook {
-width: 5px;
-height: 5px;
-}
-.instagram {
-width: 5px;
-height: 5px;
-}
-.twitter {
-width: 5px;
-height: 5px;
-}
 .ultimalinea {
     display: flex;
     flex-direction: row;
@@ -148,6 +136,11 @@ height: 5px;
 .ult {
     margin-right: 20px;
 }
+
+.ult img {
+    width: 50%;
+}
+
 
 /* Movie detail */
 .movie{
