@@ -10,7 +10,7 @@ fetch(url)
     })
 
     .then(function(data){
-        //3. Identificar donde estaá la informaciñon
+        //3. Identificar donde estaá la informacion
         console.log(data.results);
         let trending = data.results
 
@@ -24,9 +24,58 @@ fetch(url)
                                                 <img src="https://image.tmdb.org/t/p/w500/${trending[i].poster_path}" alt="reemplazar">
                                                 <p class="titulo"> <a href="./moviedetail.html">${trending[i].title}</a> </p>
                                         </article>`;
-
         }
+    })
 
+    .catch(function(error){
+        console.log(error)
+    })
+
+
+    fetch(url) 
+
+    .then (function(respuesta){
+        return respuesta.json()
+    })
+
+    .then(function(data){
+        console.log(data.results);
+        let trending = data.results
+
+        let sectionTrending = document.querySelector('.recomendadas');
+        console.log(sectionTrending);
+
+        for(let i=0; i<trending.length; i++){
+            sectionTrending.innerHTML += `<article class="media">
+                                                <img src="https://image.tmdb.org/t/p/w500/${trending[i].poster_path}" alt="reemplazar">
+                                                <p class="titulo"> <a href="./moviedetail.html">${trending[i].title}</a> </p>
+                                        </article>`;
+        }
+    })
+
+    .catch(function(error){
+        console.log(error)
+    })
+
+    fetch(url) 
+
+    .then (function(respuesta){
+        return respuesta.json()
+    })
+
+    .then(function(data){
+        console.log(data.results);
+        let trending = data.results
+
+        let sectionTrending = document.querySelector('.nuevamente');
+        console.log(sectionTrending);
+
+        for(let i=0; i<trending.length; i++){
+            sectionTrending.innerHTML += `<article class="media">
+                                                <img src="https://image.tmdb.org/t/p/w500/${trending[i].poster_path}" alt="reemplazar">
+                                                <p class="titulo"> <a href="./moviedetail.html">${trending[i].title}</a> </p>
+                                        </article>`;
+        }
     })
 
     .catch(function(error){

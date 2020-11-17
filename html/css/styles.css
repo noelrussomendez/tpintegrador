@@ -90,6 +90,11 @@ h2 {
     color: white;
 }
 
+.principal {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
 .titulo {
     color: white;
     font-family: sans-serif;
@@ -141,6 +146,7 @@ h2 {
 }
 
 footer {
+    margin-top: 50px;
     color: white;
     font-size: 15px;
     display: flex;
@@ -170,12 +176,6 @@ footer {
     justify-content: flex-start;
 }
 
-/* 
-.ult {
-    margin-right: 20px;
-}
-*/
-
 .mano img {
     width: 50px;
     margin: 5px;
@@ -190,6 +190,10 @@ footer {
 }
 .twitter img{
     width: 55px;
+    margin: 5px;
+}
+.tmdb img {
+    width: 80px;
     margin: 5px;
 }
 
