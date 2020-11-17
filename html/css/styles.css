@@ -133,14 +133,28 @@ footer {
     justify-content: flex-start;
 }
 
+/* 
 .ult {
     margin-right: 20px;
 }
+*/
 
-.ult img {
-    width: 50%;
+.mano img {
+    width: 50px;
+    margin: 5px;
 }
-
+.facebook img {
+    width: 30px;
+    margin: 10px;
+}
+.instagram img {
+    width: 30px;
+    margin: 10px;
+}
+.twitter img{
+    width: 55px;
+    margin: 5px;
+}
 
 /* Movie detail */
 .movie{
