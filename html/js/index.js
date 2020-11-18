@@ -1,6 +1,6 @@
 //1 construir la url (endpoint). url con APIKey
 let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b'
-let url = `https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`
+let url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`
 
 //2 construir fetch con la url de datos que queremos mostrar en el html
 fetch(url) 
