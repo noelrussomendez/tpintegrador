@@ -41,22 +41,24 @@ nav {
     margin-right: 20px;
 }
 
+
+/* Empieza buscador  */
+
 * {
     box-sizing: border-box;
-  }
-  
-  /* Style the search field */
-  form.example input[type=text] {
+}
+        
+form.example input[type=text] {
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
     float: left;
     width: 80%;
     background: #f1f1f1;
-  }
-  
-  /* Style the submit button */
-  form.example button {
+    margin-bottom: 20px;
+}
+        
+form.example button {
     float: left;
     width: 20%;
     padding: 10px;
@@ -64,20 +66,23 @@ nav {
     color: white;
     font-size: 17px;
     border: 1px solid grey;
-    border-left: none; /* Prevent double borders */
+    border-left: none; 
     cursor: pointer;
-  }
-  
-  form.example button:hover {
+}
+        
+form.example button:hover {
     background: #0b7dda;
-  }
-  
-  /* Clear floats */
-  form.example::after {
+}
+        
+
+form.example::after {
     content: "";
     clear: both;
     display: table;
-  }
+}
+
+/* Termina buscador */
+
 .main a {
     color: white;
     text-decoration: none;
