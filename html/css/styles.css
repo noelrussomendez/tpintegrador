@@ -194,8 +194,9 @@ footer {
 }
 
 .mano img {
-    width: 50px !important;
+    width: 100px !important;
     margin: 5px !important;
+    margin-top: 15px !important;
 }
 .facebook img {
     width: 30px !important;
