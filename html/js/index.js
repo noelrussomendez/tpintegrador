@@ -1,8 +1,8 @@
 //1 construir la url (endpoint). url con APIKey
 let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b'
 let urlTrending = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`
-let urlSeries = `https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&language=en-US&sort_by=vote_average.desc&page=1&include_null_first_air_dates=false`
-let urlOriginal = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=original_title.asc&include_adult=false&include_video=false&page=1`
+let urlSeries = `https://api.themoviedb.org/3/trending/tv/week?api_key=${apiKey}`
+let urlOriginal = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=vote_count.desc&certification_country=en-us&include_adult=false&include_video=false&page=1`
 
 
 //TRENDING

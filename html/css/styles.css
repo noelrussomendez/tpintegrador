@@ -34,9 +34,11 @@ nav {
     color: white; 
     list-style: none;
 }
+
 .space{
     margin-bottom: 95px;
 }
+
 .opciones {
     margin-right: 20px;
 }
@@ -101,8 +103,11 @@ h2 {
 }
 
 .principal {
-    margin-top: 20px !important;
+    margin-top: 30px !important;
     margin-bottom: 30px !important;
+    margin-left: 2%;
+    font-family: sans-serif;
+
 }
 
 .titulo {
@@ -117,8 +122,10 @@ h2 {
     color: white;
     text-decoration: none;
     font-family: sans-serif;
+    font-size: 15px;
+    text-align: center;
+    
 }
-
 
 .containerContent {
     display: grid;
@@ -126,14 +133,18 @@ h2 {
     gap: 2%;
     padding: 0%;
     margin-bottom: 4%;
+    margin-left: 3%;
 }
+
 .media{
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .media img {
-    width: 100%;
+    width: 85%;
 }
 
 footer {
@@ -189,12 +200,8 @@ footer {
     margin: 5px !important;
 }
 
-/* Movie detail */
-/* .movie{ */
-    /* background-image: url("../imagenes/charliefondo.jpeg");
-    background-size: cover; */
-/* } */
-/* 
+/* Movie y serie detail */
+
 .detail h2 {
     color: white;
     font-weight: bold;
@@ -211,7 +218,6 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;   
     gap: 30px;
-    border: solid grey;
     padding: 16px;
     margin-left: 15% ;
     margin-right: 15%;
@@ -230,11 +236,6 @@ footer {
     width: 100%;
 }
 
-/* Serie detail */
-/* .serie{
-    background-image: url('http://htc-wallpaper.com/wp-content/uploads/2013/09/breaking-bad1.jpg');
-    background-size: cover;
-} */
 
 /* Tablet */
 
