@@ -9,17 +9,23 @@ fetch(url)
 })
 
 .then(function(data){
-    console.log(data.results);
-    let genres = data.results
+    console.log(data.genres);
+    let genres = data.genres
 
     let sectionGenres = document.querySelector('.generos');
     console.log(sectionGenres);
 
     for(let i=0; i<genres.length; i++){
-        sectionGenres.innerHTML += `<article class="media">
-                                        <img src="https://image.tmdb.org/t/p/w500/${genres[i].poster_path}" alt="reemplazar">
+        sectionGenres.innerHTML += `<div class="generos"><h2 class="titulo"></h2>${genres[i].name}</div>
+                                 <section class="containerContent>
+                                    <article>
+                                    <div class="contenido">
+                                    <h4 class="contenidoGeneros">${genres[i].id}</h4>
+                                    <img src="https://image.tmdb.org/t/p/w500/${genres[i].poster_path}" alt="reemplazar">
                                         <p class="titulo"> <a href="./moviedetail.html">${genres[i].title}</a> </p>
-                                    </article>`;
+                                    </div>
+                                 </article>
+                                 </section>`;
     }
 })
 
