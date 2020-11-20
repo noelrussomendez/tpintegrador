@@ -191,10 +191,10 @@ footer {
 
 /* Movie detail */
 .movie{
-    background-image: url("../imagenes/charliefondo.jpeg");
-    background-size: cover;
+    /* background-image: url("../imagenes/charliefondo.jpeg");
+    background-size: cover; */
 }
-
+/* 
 .detail h2 {
     color: white;
     font-weight: bold;
@@ -217,14 +217,14 @@ footer {
     margin-right: 15%;
     margin-bottom: 4%;
     margin-top: 1%;
-}
+} */
 
-.gridMenu {
+/* .gridMenu {
     display: grid;
     grid-template-columns: 1fr ;
     align-self: center;
     text-align: center;
-}
+} */
 
 .gridContainer img {
     width: 100%;

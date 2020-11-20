@@ -22,7 +22,7 @@ fetch(url)
         for(let i=0; i<trending.length; i++){
             sectionTrending.innerHTML += `<article class="media">
                                                 <img src="https://image.tmdb.org/t/p/w500/${trending[i].poster_path}" alt="reemplazar">
-                                                <p class="titulo"> <a href="./moviedetail.html">${trending[i].title}</a> </p>
+                                                <p class="titulo"> <a href="./moviedetail.html?id=${trending[i].id}">${trending[i].title}</a> </p>
                                         </article>`;
         }
     })

@@ -12,20 +12,15 @@ fetch(url)
     console.log(data.genres);
     let genres = data.genres
 
-    let sectionGenres = document.querySelector('.generos');
+    let sectionGenres = document.querySelector('main');
     console.log(sectionGenres);
 
     for(let i=0; i<genres.length; i++){
-        sectionGenres.innerHTML += `<div class="generos"><h2 class="titulo"></h2>${genres[i].name}</div>
-                                 <section class="containerContent>
-                                    <article>
-                                    <div class="contenido">
-                                    <h4 class="contenidoGeneros">${genres[i].id}</h4>
-                                    <img src="https://image.tmdb.org/t/p/w500/${genres[i].poster_path}" alt="reemplazar">
-                                        <p class="titulo"> <a href="./moviedetail.html">${genres[i].title}</a> </p>
-                                    </div>
-                                 </article>
-                                 </section>`;
+        sectionGenres.innerHTML += `<div class="generos"> 
+                                    <a href="./moviedetail.html${genres[i].id}">
+                                    <h2 class="titulo">${genres[i].name}</h2>
+                                    </a>
+                                    </div>`;
     }
 })
 
