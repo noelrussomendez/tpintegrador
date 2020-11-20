@@ -18,14 +18,14 @@ fetch(url)
 
    let generosDetalle = data.results;
 
-    let sectionGeneros = document.querySelector('.generosDetalle');
+    let sectionGeneros = document.querySelector('.containerContent');
     console.log(sectionGeneros);
 
-    for(let i=0; i<generosDetalle.length; i++){
+    for(let i=0; i<10; i++){
     
-        sectionGeneros.innerHTML += `<section class="detalle">
-                                            <a href="./moviedetail.html?id=${generosDetalle[i].id}&media_type=movie"> <img src="https://image.tmdb.org/t/p/w500/${generosDetalle[i].poster_path}" alt="reemplazar">
-                                            <h2 class="titulo">${generosDetalle[i].title}</h2>
+        sectionGeneros.innerHTML += `<section class="containerContent">
+                                            <img class="fotosDetalle" src="https://image.tmdb.org/t/p/w500/${generosDetalle[i].poster_path}" alt="reemplazar">
+                                            <h2 class="titulo"> <a href="./moviedetail.html?id=${generosDetalle[i].id}&media_type=movie"> ${generosDetalle[i].title}</h2>
                                     </section>`;
      }
 })
@@ -33,4 +33,3 @@ fetch(url)
 .catch(function(error){
     console.log(error)
 })
-
