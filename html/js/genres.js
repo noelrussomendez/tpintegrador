@@ -9,16 +9,16 @@ fetch(url)
 })
 
 .then(function(data){
-    console.log(data.genres);
-    let genres = data.genres
+    console.log(data);
+    let generos = data.genres
 
     let sectionGenres = document.querySelector('main');
     console.log(sectionGenres);
 
-    for(let i=0; i<genres.length; i++){
+    for(let i=0; i<generos.length; i++){
         sectionGenres.innerHTML += `<div class="generos"> 
-                                    <a href="./genresdetail.html" ${genres[i].id} > 
-                                    <h2 class="titulo">${genres[i].name}</h2>
+                                    <a href="./genresdetail.html?genres=${generos[i].id}" ${generos[i].id} > 
+                                    <h2 class="titulo">${generos[i].name}</h2>
                                     </a>
                                     </div>`;
     }
