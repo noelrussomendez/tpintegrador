@@ -24,11 +24,12 @@ fetch(url)
                                     <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
                                     <h2 class="titulo">${movie.title}</h2>
                                     <p> ${movie.vote_average}</p>
-                            
                                   </article>`
   
 })
 
+
+// Falta hacer el REVIEW
 
 .catch(function(error){
     console.log(error);

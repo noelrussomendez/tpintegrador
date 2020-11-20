@@ -52,7 +52,7 @@ fetch(urlTrending)
         for(let i=0; i<series.length; i++){
             sectionSeries.innerHTML += `<article class="media">
                                                 <img src="https://image.tmdb.org/t/p/w500/${series[i].poster_path}" alt="reemplazar">
-                                                <p class="titulo"> <a href="./moviedetail.html">${series[i].name}</a> </p>
+                                                <p class="titulo"> <a href="./seriedetail.html?id=${series[i].id}">${series[i].name}</a> </p>
                                         </article>`;
         }
     })
@@ -78,7 +78,7 @@ fetch(urlTrending)
         for(let i=0; i<originales.length; i++){
             sectionOriginales.innerHTML += `<article class="media">
                                                 <img src="https://image.tmdb.org/t/p/w500/${originales[i].poster_path}" alt="reemplazar">
-                                                <p class="titulo"> <a href="./moviedetail.html">${originales[i].title}</a> </p>
+                                                <p class="titulo"> <a href="./moviedetail.html?id=${originales[i].id}">${originales[i].title}</a> </p>
                                         </article>`;
         }
     })
