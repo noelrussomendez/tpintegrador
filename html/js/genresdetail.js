@@ -13,21 +13,26 @@ fetch(url)
     return respuesta.json()
 })
 
-.then(function(generos){
-    console.log(generos);
-    // let trending = data.results
+.then(function(data){
+    console.log(data);
 
-    // let sectionTrending = document.querySelector('.recomendadas');
-    // console.log(sectionTrending);
+   let generosDetalle = data.generosDetalle;
 
-    // for(let i=0; i<trending.length; i++){
-    //     sectionTrending.innerHTML += `<article class="media">
-    //                                         <img src="https://image.tmdb.org/t/p/w500/${trending[i].poster_path}" alt="reemplazar">
-    //                                         <p class="titulo"> <a href="./moviedetail.html">${trending[i].title}</a> </p>
-    //                                 </article>`;
-    // }
+    let sectionGeneros = document.querySelector('.generosDetalle');
+    console.log(sectionGeneros);
+
+    for(let i=0; i<generosDetalle.length; i++){
+    
+        sectionGeneros.innerHTML += `<section class="detalle">
+                                            <img src="https://image.tmdb.org/t/p/w500/${generosDetalle[i].poster_path}" alt="reemplazar">
+                                            <p class="titulo"> <a href="./moviedetail.html?id="${generosDetalle[i].genres_ids}></a> </p>
+                                    </section>`;
+     }
 })
 
 .catch(function(error){
     console.log(error)
 })
+
+
+// <a href="./moviedetail.html?id=${trending[i].id}">${trending[i].title}</a>

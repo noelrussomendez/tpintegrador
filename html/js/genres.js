@@ -17,7 +17,7 @@ fetch(url)
 
     for(let i=0; i<genres.length; i++){
         sectionGenres.innerHTML += `<div class="generos"> 
-                                    <a href="./genresdetail.html${genres[i].id}">
+                                    <a href="./genresdetail.html" ${genres[i].id} > 
                                     <h2 class="titulo">${genres[i].name}</h2>
                                     </a>
                                     </div>`;
