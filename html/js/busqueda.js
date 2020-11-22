@@ -15,3 +15,15 @@ const image_url = "https://image.tmdb.org/t/p/w500"
 // construir una URL dinámica, que permite 
 const newUrl = urlBuscador + 'query=' + resultado
 
+fetch(url)
+
+.then (function(respuesta){
+    return respuesta.json()
+})
+
+.then(function(urlBuscador){
+    console.log(urlBuscador);
+   
+    let busqueda = document.querySelector('.form-group my-4 text-center');
+    console.log(busqueda);
+    
