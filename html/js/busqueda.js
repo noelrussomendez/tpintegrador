@@ -1,23 +1,17 @@
-let formulario = document.querySelector ('form');
+// obtengo el query string
+let queryString = window.location.search
 
-formulario.addEventListener ('submit' , function (event) {
-// paso 1: evitar que el form se envíe
-    event.preventDefault ();
-    let campoBuscar = document.querySelector ('.searchfield')
-    let mensaje= document.querySelector('.alert');
+//paso de ese texto a un objeto
+let objetoQuery = new URLSearchParams(queryString);
 
-if(campoBuscar.value == ""){
-        mensaje.innerText = 'El campo no debe estar vacío';
-} else if(campoBuscar.value.length <2){
-mensaje.innerText = 'Por favor ingrese al menos 3 caracteres a buscar';
-}else{
-    this.submit();
-}
+//ahora si obtengo el resultado de la busqueda 
+let resultado = objetoQuery.get('titulo');
+let media = objetoQuery.get('media')
 
+const api_key = 'ca4449919efcaf3d7e435fc10a0a0b0b';
+const urlBuscador = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}`;
+const image_url = "https://image.tmdb.org/t/p/w500"
 
-})
-let campoBuscar = document.querySelector ('.searchfield')
-let mensaje = document.querySelector('.alert');
-campoBuscar.addEventListener('input', function(){
-    mensaje.innerText = ""
-})
+// construir una URL dinámica, que permite 
+const newUrl = urlBuscador + 'query=' + resultado
+
