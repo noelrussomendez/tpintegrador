@@ -26,4 +26,5 @@ fetch(url)
    
     let busqueda = document.querySelector('.form-group my-4 text-center');
     console.log(busqueda);
-    
+
+})
