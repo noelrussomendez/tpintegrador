@@ -24,9 +24,30 @@ fetch(url)
                                     <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
                                     <h2 class="titulo">${movie.title}</h2>
                                     <p> Votes: ${movie.vote_average}</p>
+
                                   </article>`
-  
-})
+                                  let storage = localStorage.getItem('favoritos')
+                                  console.log(storage);
+                                  if (storage===null){
+                                      localStorage.setItem('favoritos', '[]')
+                                  }
+                                  let button =document.querySelector('.favorito')
+                                  console.log(button);
+                                  button.addEventListener('click', function(){
+                                      
+                                      let storageJs =JSON.parse(storage)
+                                      if(!storageJs.includes(id)){
+                                          storageJs.push(id)
+                                      }else{
+                                          storageJs = storageJs.filter (function(movie){
+                                              return movie != id
+                                          })
+                                      }
+                                      localStorage.setItem('favoritos',JSON.stringify(storageJs))
+                                      
+                                  })
+                                })
+
 
 
 // Falta hacer el REVIEW
