@@ -17,15 +17,18 @@ fetch(url)
     
         let serieDetail = document.querySelector('.gridContainer');
         console.log(serieDetail);
+for (i=0;i<serie.genres.length; i++){
+    serieDetail.innerHTML += `<article class="gridContainer">
 
-            serieDetail.innerHTML += `<article class="gridContainer">
+    <img src="https://image.tmdb.org/t/p/w500/${serie.poster_path}">
+    <h2 class="titulo">${serie.name}</h2>
+    <p> Genero: <a href="./genresdetail.html?genres=${serie.genres[i].id}"> ${serie.genres[i].name} </a> </p>
+    <p> Disponible desde: ${serie.first_air_date} </p>
 
-                                        <img src="https://image.tmdb.org/t/p/w500/${serie.poster_path}">
-                                        <h2 class="titulo">${serie.name}</h2>
-                                        <p> Genero: <a href="./genresdetail.html?id=${serie.genres}"> ${serie.genres} </a> </p>
-                                        <p> Disponible desde: ${serie.first_air_date} </p>
-                                
-                                    </article>`
+</article>`
+}
+
+
                                     let storage = localStorage.getItem('favoritos')
                                     console.log(storage);
                                     if (storage===null){
