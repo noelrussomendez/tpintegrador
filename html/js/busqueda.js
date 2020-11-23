@@ -33,7 +33,7 @@ fetch(urlBuscador)
     console.log (respuesta);
     let results = ''
 
-respuesta.results.forEach ((multi, index)) => {
+respuesta.results.forEach ((multi,  index) => {
     if (multi.media_type == "tv"){
         results += `<article class="gridContainer">
         <a href= "seriedetail.js?id={multi.id}">
@@ -52,13 +52,13 @@ respuesta.results.forEach ((multi, index)) => {
         </article>`
 
     
-    }
-}
+    })
 
 
-})
+
+
 
 .catch(function(error){
     console.log(error);
-})
+}
 
