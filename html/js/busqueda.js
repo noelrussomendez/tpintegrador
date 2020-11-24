@@ -51,8 +51,9 @@ respuesta.results.forEach ((multi,  index) => {
         <p> Votes: ${movie.vote_average}</p>
         </article>`
 
-    
-    })
+
+    }
+})
 
 
 
@@ -60,5 +61,5 @@ respuesta.results.forEach ((multi,  index) => {
 
 .catch(function(error){
     console.log(error);
-}
+})
 
