@@ -36,7 +36,7 @@ let movies = document.querySelector ('.resultados');
 console.log(info)
 
 
-info.forEach((seriesypelis) => {
+info.forEach((seriesypelis => {
     if (seriesypelis.media_type == "tv"){
         results += `<article class="gridContainer">
         <a href= "seriedetail.js?id={multi.id}">
@@ -57,7 +57,7 @@ info.forEach((seriesypelis) => {
 
     }
     })
-})
+)
 
 
 
@@ -65,4 +65,5 @@ info.forEach((seriesypelis) => {
 
 .catch(function(error){
     console.log(error);
+})
 })
