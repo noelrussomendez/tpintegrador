@@ -21,38 +21,42 @@ let searchTitulo = document.querySelector ('.searchTitle')
 
 // construir una URL dinámica
 
-let newUrl = urlBuscador + 'query=' + resultado
+let newUrl = urlBuscador + 'query=' + results
 
 fetch(urlBuscador)
-.then (datos=>datos.json() )
-.then (respuesta => {
+.then (function (respuesta){
+    return respuesta.json()
+})
 
-    let spinner = document.querySelector ('.cargando')
+.then (function (data){
+let info = data.results;
+let movies = document.querySelector ('.resultados');
 
-    spinner.style.display = "none"
-    console.log (respuesta);
-    let results = ''
 
-respuesta.results.forEach ((multi,  index) => {
-    if (multi.media_type == "tv"){
+console.log(info)
+
+
+info.forEach((seriesypelis) => {
+    if (seriesypelis.media_type == "tv"){
         results += `<article class="gridContainer">
         <a href= "seriedetail.js?id={multi.id}">
         <article class="gridContainer">
-        <img src="https://image.tmdb.org/t/p/w500/${serie.poster_path}">
-        <h2 class="titulo">${serie.name}</h2>
-        <p> Genero: <a href="./genresdetail.html?genres=${serie.genres[i].id}"> ${serie.genres[i].name} </a> </p>
-        <p> Disponible desde: ${serie.first_air_date} </p>
+        <img src="https://image.tmdb.org/t/p/w500/${seriesypelis.poster_path}">
+        <h2 class="titulo">${seriesypelis.name}</h2>
+        <p> Genero: <a href="./genresdetail.html?genres=${seriesypelis.genres[i].id}"> ${seriesypelis.genres[i].name} </a> </p>
+        <p> Disponible desde: ${seriesypelis.first_air_date} </p>
         </article>`
-    } else if (multi.media_type == "movie"){
+    } else if (seriesypelis.media_type == "movie"){
         results += `<article class="gridContainer">
-        <a href= "moviedetail.js?id={multi.id}">
-        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
-        <h2 class="titulo">${movie.title}</h2>
-        <p> Votes: ${movie.vote_average}</p>
-        </article>`
 
+        <img src="https://image.tmdb.org/t/p/w500/${seriesypelis.poster_path}">
+        <h2 class="titulo">${seriesypelis.title}</h2>
+        <p> Votes: ${seriesypelis.vote_average}</p>
+
+      </article>`
 
     }
+    })
 })
 
 
@@ -62,4 +66,3 @@ respuesta.results.forEach ((multi,  index) => {
 .catch(function(error){
     console.log(error);
 })
-
