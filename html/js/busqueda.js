@@ -1,6 +1,5 @@
  // JS search 
 
-
 let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b';
 // obtengo el query string
 let queryString = window.location.search;
@@ -57,11 +56,8 @@ info.forEach((seriesypelis => {
     })
 )
 
-
-
-
-
 .catch(function(error){
     console.log(error);
 })
 })
+

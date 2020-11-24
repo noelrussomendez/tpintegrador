@@ -15,17 +15,19 @@ fetch(url)
 .then(function(movie){
     console.log(movie);
    
-    let movieDetail = document.querySelector('.gridContainer');
+    let movieDetail = document.querySelector('main');
     console.log(movieDetail);
 
    
-        movieDetail.innerHTML += `<article class="gridContainer">
+        movieDetail.innerHTML += ` <article class="gridContainer">
 
-                                    <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
+                                    <img class="foto" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
                                     <h2 class="titulo">${movie.title}</h2>
+                                    <p> ${movie.overview}</p>
                                     <p> Votes: ${movie.vote_average}</p>
 
                                   </article>`
+                                  
                                   let storage = localStorage.getItem('favoritos')
                                   console.log(storage);
                                   if (storage===null){

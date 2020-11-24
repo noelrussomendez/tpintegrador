@@ -213,6 +213,10 @@ footer {
     text-align: start;
 }
 
+.foto {
+    width: 70%;
+}
+
 .gridContainer {
     background-color: #212121;
     display: grid;
@@ -244,7 +248,6 @@ img.fotosDetalle {
     margin-bottom: 30px;
     width: 150px;
 }
-
 
 
 /* Tablet */
