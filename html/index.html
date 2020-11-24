@@ -36,13 +36,17 @@
     <!-- Buscador -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
-      
-    <form action="./busqueda.html" method="get">
+      <div class="buscador">
+    <form action="./busqueda.html" method="get" class="buscador">
+        <li>
         <div class="form-group my-4 text-center">
-            <input type="text" name= "searchData" placeholder="Search..." name="search" value="">
-            <button type="submit"><i class="buscar"></i>Buscar</button>
+            <input type="text" name= "searchData" placeholder="Search..." value="" id="inputValue" class="searchfield">
+            <button type="submit"><i class="buscar" id="search"></i>Buscar</button>
         </div>
+        <p class="alert"></p>
     </form>
+</li>
+</div>
     
 
     <!--Carrusel-->
