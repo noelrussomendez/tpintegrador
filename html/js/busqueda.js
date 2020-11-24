@@ -1,67 +1,53 @@
- // JS search 
-
-
-let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b';
-// obtengo el query string
 let queryString = window.location.search;
-
-//paso de ese texto a un objeto
-let objetoQuery = new URLSearchParams(queryString);
-console.log (objetoQuery);
-
-//ahora si obtengo el resultado de la busqueda 
-let search = objetoQuery.get('searchData');
-console.log (search)
-
-let urlBuscador = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&query=${search}&page=1&include_adult=false`;
-
-let results = document.querySelector ('.resultado');
-let searchTitulo = document.querySelector ('.searchTitle')
+console.log(queryString);
+let queryObject = new URLSearchParams(queryString)
+let search = queryObject.get ('.searchData');
+console.log(search);
 
 
-// construir una URL dinámica
+let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b'
+let url = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&query=${search}&page=1&include_adult=false`
 
-let newUrl = urlBuscador + 'query=' + resultado
+let resultados = document.querySelector('.resultados')
 
-fetch(urlBuscador)
-.then (function (respuesta){
-    return respuesta.json()
+fetch(url)
+.then(function (respuestas){
+    return respuestas.json()
 })
+.then(function(data){
+    console.log(data);
+    let info = data.results;
+    if (info.length != 0){ 
+    for (let i=0; i<info.length; i++){
+        if(info[i].media_type == "tv"){
+            /* resultados.innerHTML += `<li>Serie: ${info[i].original_name}</li>` */
+            let resultados = document.querySelector(".resultados")
+            resultados.innerHTML += `<article class="gridContainer">
 
-.then (function (data){
-let results = document.querySelector ('.resultado');
-let info = data.results;
-console.log(data)
+            <img src="https://image.tmdb.org/t/p/w500/${info.poster_path}">
+            <h2 class="titulo">${info.name}</h2>
+            <p> Genero: <a href="./genresdetail.html?genres=${info.genres[i].id}"> ${info.genres[i].name} </a> </p>
+            <p> Disponible desde: ${info.first_air_date} </p>
+        
+        </article>`}
+         else if (info[i].media_type == "movie"){
+            /* resultados.innerHTML += `<li>Pelicula: ${info[i].title}</li>` */
+            let resultados = document.querySelector(".resultados")
+            resultados.innerHTML += `<article class="gridContainer">
 
+            <img src="https://image.tmdb.org/t/p/w500/${info.poster_path}">
+            <h2 class="titulo">${info.title}</h2>
+            <p> Votes: ${info.vote_average}</p>
 
-info.forEach((seriesypelis => {
-    if (seriesypelis.media_type == "tv"){
-        results += `<article class="gridContainer">
-        <a href= "seriedetail.js?id={multi.id}">
-        <article class="gridContainer">
-        <img src="https://image.tmdb.org/t/p/w500/${seriesypelis.poster_path}">
-        <h2 class="titulo">${seriesypelis.name}</h2>
-       <p> Genero: <a href="./genresdetail.html?genres=${seriesypelis.genres[i].id}"> ${seriesypelis.genres[i].name} </a> </p>
-        <p> Disponible desde: ${seriesypelis.first_air_date} </p>
-        </article>`
-    } else if (seriesypelis.media_type == "movie"){
-        results += `<article class="gridContainer">
-
-        <img src="https://image.tmdb.org/t/p/w500/${seriesypelis.poster_path}">
-        <h2 class="titulo">${seriesypelis.title}</h2>
-        <p> Votes: ${seriesypelis.vote_average}</p>
-
-      </article>`
-
+          </article>`
+        }
+        
+    }}
+    else{
+        let alertas = document.querySelector('h2');
+        alertas.innerText = "There are no results for: " + search
     }
-    })
-)
 
-
-
-
-
-.catch(function(error){
-    console.log(error);
+    
 })
-})
+.catch(error => console.log(error))
