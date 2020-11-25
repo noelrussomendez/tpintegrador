@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
- // JS search 
-
-let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b';
-// obtengo el query string
->>>>>>> c4fc46d0e9795a6a6de60fdbaa3837b5b0b4c299
 let queryString = window.location.search;
 console.log(queryString);
 let queryObject = new URLSearchParams(queryString)
@@ -54,12 +47,6 @@ fetch(url)
         let alertas = document.querySelector('h2');
         alertas.innerText = "There are no results for: " + search
     }
-<<<<<<< HEAD
-
-    
-})
-.catch(error => console.log(error))
-=======
     })
 )
 
@@ -68,4 +55,3 @@ fetch(url)
 })
 })
 
->>>>>>> c4fc46d0e9795a6a6de60fdbaa3837b5b0b4c299
