@@ -17,9 +17,9 @@ fetch(url)
     
         let serieDetail = document.querySelector('main');
         console.log(serieDetail);
-
-    for (i=0;i<serie.genres.length; i++){
     
+        for (i=0;i<serie.genres.length; i++){
+
         serieDetail.innerHTML += `<article class="gridContainer">
                                         <div>
                                         <img class="foto" src="https://image.tmdb.org/t/p/w500/${serie.poster_path}">
@@ -27,14 +27,20 @@ fetch(url)
                                         <div>
                                         <h2 class="tituloSeries">${serie.name}</h2>
                                         <p class="textoSeries"> ${serie.overview}</p>
+
+                                        
+
                                         <p class="textoSeries"> Genero: <a href="./genresdetail.html?genres=${serie.genres[i].id}"> ${serie.genres[i].name} </a> </p>
+
+                                        
+
                                         <p class="textoSeries"> Disponible desde: ${serie.first_air_date} </p>
                                         <button type="Agregar" class="favorito">Favoritos</button>   
                                         <button type="Quitar" class="view">Quitar de favoritos</button>
                                         </div>
                                     </article>`
-}
 
+         }
 
         let storage = localStorage.getItem('favoritos')
             console.log(storage);

@@ -27,7 +27,7 @@ fetch(url)
                                     <h2 class="tituloSeries">${movie.title}</h2>
                                     <p class="textoSeries"> ${movie.overview}</p>
                                     <p class="textoSeries"> Votes: ${movie.vote_average}</p>
-                                    <button type="Agregar" class="favorito">Favoritos</button>
+                                    <button type="Agregar" class="favorito1">Favoritos</button>
                                     <button type="Quitar" class="view">Quitar de favoritos</button>
                                     </div>
 
@@ -38,11 +38,11 @@ fetch(url)
                                   if (storage===null){
                                       localStorage.setItem('favoritos', '[]')
                                   }
-                                  let button =document.querySelector('.favorito')
+                                  let button =document.querySelector('.favorito1')
                                   console.log(button);
-                                  button.addEventListener('click', function(event){
-                                    this.style.color="purple";
-                                    console.log(event);
+                                  button.addEventListener('click', function(){
+                                    // this.style.color="purple";
+                                    // console.log(event);
                                       
                                       let storageJs =JSON.parse(storage)
                                       if(!storageJs.includes(id)){
