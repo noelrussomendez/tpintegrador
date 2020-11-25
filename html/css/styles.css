@@ -213,6 +213,10 @@ footer {
     text-align: start;
 }
 
+.foto {
+    width: 70%;
+}
+
 .gridContainer {
     background-color: #212121;
     display: grid;
@@ -240,8 +244,8 @@ footer {
 /* Detail generos */
 
 img.fotosDetalle {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 10px;
     width: 150px;
 }
 
