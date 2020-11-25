@@ -23,7 +23,7 @@ window.addEventListener('load',function(){
     .then (function (data){
         let results = document.querySelector ('.resultado');
         let info = data.results;
-        console.log(data)
+        console.log(data);
 
         info.forEach(buscador => {
         
@@ -37,24 +37,21 @@ window.addEventListener('load',function(){
                     <article class="gridContainer">
                     <img src="https://image.tmdb.org/t/p/w500/${buscador.poster_path}">
                     <h2 class="titulo">${buscador.name}</h2>
-                   <p> Genero: <a href="./genresdetail.html?genres=${buscador.genres[i].id}"> ${buscador.genres[i].name} </a> </p>
-                    <p> Disponible desde: ${buscador.first_air_date} </p>
                     </article>`
                 } else if (buscador.media_type == "movie"){
                     results.innerHTML += `<article class="gridContainer">
               
                     <img src="https://image.tmdb.org/t/p/w500/${buscador.poster_path}">
                     <h2 class="titulo">${buscador.title}</h2>
-                    <p> Votes: ${buscador.vote_average}</p>
-              
                   </article>`
               
-                }
+                } 
             
             
         })
         
-
+        
     .catch(function(error){
         console.log(error);
-    }))
+    })
+    
