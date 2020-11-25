@@ -15,16 +15,23 @@ fetch(url)
     .then(function(serie){
         console.log(serie);
     
-        let serieDetail = document.querySelector('.gridContainer');
+        let serieDetail = document.querySelector('main');
         console.log(serieDetail);
 
     for (i=0;i<serie.genres.length; i++){
     
         serieDetail.innerHTML += `<article class="gridContainer">
-                                        <img src="https://image.tmdb.org/t/p/w500/${serie.poster_path}">
-                                        <h2 class="titulo">${serie.name}</h2>
-                                        <p> Genero: <a href="./genresdetail.html?genres=${serie.genres[i].id}"> ${serie.genres[i].name} </a> </p>
-                                        <p> Disponible desde: ${serie.first_air_date} </p>
+                                        <div>
+                                        <img class="foto" src="https://image.tmdb.org/t/p/w500/${serie.poster_path}">
+                                        </div>
+                                        <div>
+                                        <h2 class="tituloSeries">${serie.name}</h2>
+                                        <p class="textoSeries"> ${serie.overview}</p>
+                                        <p class="textoSeries"> Genero: <a href="./genresdetail.html?genres=${serie.genres[i].id}"> ${serie.genres[i].name} </a> </p>
+                                        <p class="textoSeries"> Disponible desde: ${serie.first_air_date} </p>
+                                        <button type="Agregar" class="favorito">Favoritos</button>   
+                                        <button type="Quitar" class="view">Quitar de favoritos</button>
+                                        </div>
                                     </article>`
 }
 
@@ -38,7 +45,9 @@ fetch(url)
                                     
             let button =document.querySelector('.favorito')
                 console.log(button);
-                button.addEventListener('click', function(){
+                button.addEventListener('click', function(event){
+                    this.style.color="purple";
+                    console.log(event);
                                         
             let storageJs =JSON.parse(storage)
                 

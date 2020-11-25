@@ -50,7 +50,7 @@ storageJs.forEach( id =>{
     .then(datos => datos.json())
     .then(respuesta=>{
         console.log(respuesta);
-        favoritos.innerHTML += ` <a href="./detalle/movieDetail.html?id=${respuesta.id}&media_type=tv"><img src="https://image.tmdb.org/t/p/w500${respuesta.poster_path}" alt=""></a>`
+        favoritos.innerHTML += ` <a href="./serieDetail.html?id=${respuesta.id}&media_type=tv"><img class="imgfav" src="https://image.tmdb.org/t/p/w500${respuesta.poster_path}" alt=""></a>`
     })
     
 
@@ -66,7 +66,7 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=ca4449919efcaf3d7e435fc1
 .then(datos => datos.json())
 .then(respuesta=>{
     console.log(respuesta);
-    favoritos.innerHTML += ` <a href="./detalle/movieDetail.html?id=${respuesta.id}&media_type=movie"><img src="https://image.tmdb.org/t/p/w500${respuesta.poster_path}" alt=""></a>`
+    favoritos.innerHTML += ` <a href="./movieDetail.html?id=${respuesta.id}&media_type=movie"><img class="imgfav" src="https://image.tmdb.org/t/p/w500${respuesta.poster_path}" alt=""></a>`
 })
 .catch(function(error){    
     console.log(error);

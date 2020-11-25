@@ -40,7 +40,9 @@ fetch(url)
                                   }
                                   let button =document.querySelector('.favorito')
                                   console.log(button);
-                                  button.addEventListener('click', function(){
+                                  button.addEventListener('click', function(event){
+                                    this.style.color="purple";
+                                    console.log(event);
                                       
                                       let storageJs =JSON.parse(storage)
                                       if(!storageJs.includes(id)){

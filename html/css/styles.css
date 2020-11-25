@@ -259,8 +259,17 @@ img.fotosDetalle {
     margin-bottom: 10px;
     width: 150px;
 }
-
-
+/*Fvoritos*/
+.favoritos{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.imgfav{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
 
 /* Tablet */
 
