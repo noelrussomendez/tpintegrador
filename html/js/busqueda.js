@@ -1,7 +1,5 @@
 window.addEventListener('load',function(){
-
- 
-   
+    console.log("hola");
 
     buscadorQuery = location.search
     buscadorQueryObj = new URLSearchParams(buscadorQuery)
@@ -14,44 +12,34 @@ window.addEventListener('load',function(){
 
     fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&query=${search}&page=1&include_adult=false`
     )
-    .then(function(respuesta){
-        return respuesta.json()
-    })
-
-
-
-    .then (function (data){
+        .then(function(respuesta){
+            return respuesta.json()
+        })
+    .then (function(data){
         let results = document.querySelector ('.resultado');
         let info = data.results;
         console.log(data);
-
-        info.forEach(buscador => {
+        console.log("hola!")
         
-            console.log(buscador);
-
             //let articulo = document.createElement('article')
-            info.forEach((buscador => {
+            info.forEach( buscador => {
                 if (buscador.media_type == "tv"){
                     results.innerHTML += `<article class="gridContainer">
-                    <a href= "seriedetail.js?id={multi.id}">
-                    <article class="gridContainer">
+                    <a href= "seriedetail.js?id=${buscador.id}">
                     <img src="https://image.tmdb.org/t/p/w500/${buscador.poster_path}">
                     <h2 class="titulo">${buscador.name}</h2>
                     </article>`
                 } else if (buscador.media_type == "movie"){
                     results.innerHTML += `<article class="gridContainer">
-              
+                    <a href= "moviedetail.js?id=${buscador.id}">
                     <img src="https://image.tmdb.org/t/p/w500/${buscador.poster_path}">
                     <h2 class="titulo">${buscador.title}</h2>
                   </article>`
               
-                } 
-            
-            
-        })
-        
-        
+                }  
+            })
+    })
     .catch(function(error){
         console.log(error);
     })
-    
+})
