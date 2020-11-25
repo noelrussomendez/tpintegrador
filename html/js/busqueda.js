@@ -48,10 +48,10 @@ fetch(url)
         alertas.innerText = "There are no results for: " + search
     }
     })
-)
+
 
 .catch(function(error){
     console.log(error);
 })
-})
+
 
