@@ -20,11 +20,16 @@ fetch(url)
 
    
         movieDetail.innerHTML += ` <article class="gridContainer">
-
+                                    <div>
                                     <img class="foto" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
-                                    <h2 class="titulo">${movie.title}</h2>
-                                    <p> ${movie.overview}</p>
-                                    <p> Votes: ${movie.vote_average}</p>
+                                    </div>
+                                    <div>
+                                    <h2 class="tituloSeries">${movie.title}</h2>
+                                    <p class="textoSeries"> ${movie.overview}</p>
+                                    <p class="textoSeries"> Votes: ${movie.vote_average}</p>
+                                    <button type="Agregar" class="favorito">Favoritos</button>
+                                    <button type="Quitar" class="view">Quitar de favoritos</button>
+                                    </div>
 
                                   </article>`
                                   

@@ -215,6 +215,17 @@ footer {
 
 .foto {
     width: 70%;
+    margin-top: 90px;
+}
+
+.tituloSeries {
+    gap: none;
+    margin-bottom: 10%;
+}
+
+.textoSeries {
+    gap: none;
+    line-height: 40px;
 }
 
 .gridContainer {
