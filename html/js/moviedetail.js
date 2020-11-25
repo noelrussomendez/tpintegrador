@@ -18,7 +18,7 @@ fetch(url)
     let movieDetail = document.querySelector('main');
     console.log(movieDetail);
 
-   
+    
         movieDetail.innerHTML += ` <article class="gridContainer">
                                     <div>
                                     <img class="foto" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">

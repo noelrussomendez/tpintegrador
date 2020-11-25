@@ -1,9 +1,10 @@
 window.addEventListener('load',function(){
-    console.log("hola");
 
-    buscadorQuery = location.search
-    buscadorQueryObj = new URLSearchParams(buscadorQuery)
+   
+   let buscadorQuery = location.search
+   let buscadorQueryObj = new URLSearchParams(buscadorQuery)
     console.log(buscadorQueryObj);
+
 
     let search = buscadorQueryObj.get('.searchData')
     console.log(search);
@@ -16,28 +17,42 @@ window.addEventListener('load',function(){
             return respuesta.json()
         })
     .then (function(data){
-        let results = document.querySelector ('.resultado');
+        console.log(data)
+
         let info = data.results;
-        console.log(data);
-        console.log("hola!")
+        let movies = document.querySelector ('.movies');
+        console.log(movies);
+       
         
-            //let articulo = document.createElement('article')
-            info.forEach( buscador => {
-                if (buscador.media_type == "tv"){
-                    results.innerHTML += `<article class="gridContainer">
-                    <a href= "seriedetail.js?id=${buscador.id}">
-                    <img src="https://image.tmdb.org/t/p/w500/${buscador.poster_path}">
-                    <h2 class="titulo">${buscador.name}</h2>
-                    </article>`
-                } else if (buscador.media_type == "movie"){
-                    results.innerHTML += `<article class="gridContainer">
-                    <a href= "moviedetail.js?id=${buscador.id}">
-                    <img src="https://image.tmdb.org/t/p/w500/${buscador.poster_path}">
-                    <h2 class="titulo">${buscador.title}</h2>
+for(let i= 0; i<info.length; i++){
+
+if(info[i].media_type =="tv"){
+          movies.innerHTML +=
+                    ` <article class="gridContainer">
+                    <div>
+                    <img class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}">
+                    </div>
+                    <div>
+                    <h2 class="tituloSeries">${info[i].title}</h2>
+                    <p class="textoSeries"> ${info[i].overview}</p>
+                    <p class="textoSeries"> Votes: ${info[i].vote_average}</p>
+                    </div>
+                  </article>`
+                } else if (info[i].media_type == "movie"){
+                    movies.innerHTML += 
+                    ` <article class="gridContainer">
+                    <div>
+                    <img class="foto" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}">
+                    </div>
+                    <div>
+                    <h2 class="tituloSeries">${info[i].title}</h2>
+                    <p class="textoSeries"> ${info[i].overview}</p>
+                    <p class="textoSeries"> Votes: ${info[i].vote_average}</p>
+                    </div>
                   </article>`
               
                 }  
-            })
+            }
     })
     .catch(function(error){
         console.log(error);
