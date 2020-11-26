@@ -1,12 +1,12 @@
 //1 Obtener la queryString
 let queryString = window.location.search;
 
-//2 Transformarla en un obejto literal
+//2 Transformarla en un objeto literal
 let queryObject = new URLSearchParams(queryString);
 
 //3 Obtener EL dato para completar el end point.
-let searchData = queryObject.get('searchData'); //Cambie segun lo que tengo en la url
-let mediaType = queryObject.get('mediaType'); //Cambie segun lo que tengo en la url
+let searchData = queryObject.get('searchData'); //Cambia segun la url
+let mediaType = queryObject.get('mediaType'); //Cambia segun la url
 
 
 let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b'
@@ -29,14 +29,12 @@ if(mediaType == "movie"){
             console.log(movies);
 
             for (let i = 0; i < 4; i++) {
-                movies.innerHTML += `<article class="card-wrapper col-sm-3">
-                                    <div class="card my-3">
+                movies.innerHTML += `<article class="busqueda">
+                                    <div class="divbusqueda">
                                         <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">${info[i].title}</h5>
-                                                <p class="card-text">${info[i].overview}</p>
+                                           
                                                 <a href="moviedetail.html?id=${info[i].id}" class="btn btn-primary">Ver más</a>
-                                            </div>
+                                        
                                         </div>
                                     </article>` 
             }
@@ -48,7 +46,7 @@ if(mediaType == "movie"){
 
 }
 
-if(mediaType == "tv"){
+else if(mediaType == "tv"){
 
     let url = `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&language=en-US&page=${searchData}1&include_adult=false` //Viene de la API de TMDB
 
@@ -66,14 +64,12 @@ if(mediaType == "tv"){
             console.log(movies);
 
             for (let i = 0; i < 4; i++) {
-                movies.innerHTML += `<article class="card-wrapper col-sm-3">
-                                    <div class="card my-3">
+                movies.innerHTML += `<article class="busqueda">
+                                    <div class="divbusqueda">
                                         <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">${info[i].title}</h5>
-                                                <p class="card-text">${info[i].overview}</p>
+                                        
                                                 <a href="moviedetail.html?id=${info[i].id}" class="btn btn-primary">Ver más</a>
-                                            </div>
+                                        
                                         </div>
                                     </article>`
             }
@@ -84,11 +80,11 @@ if(mediaType == "tv"){
         })
 }
 
-if(mediaType == "person"){
+else if(mediaType == "person"){
     let url = `https://api.themoviedb.org/3/search/person?api_key=${apiKey}&language=en-US&page=${searchData}1&include_adult=false`
 }
 
-if(mediaType == "all"){
+else(mediaType == "all")
     //fetch a multisearch
 
     let url = ` https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&query=${searchData}&page=1&include_adult=false` //Viene de la API de TMDB
@@ -107,46 +103,44 @@ if(mediaType == "all"){
 
             for (let i = 0; i < info.length; i++) {
                 if(info[i].media_type == "movie"){
-                    movies.innerHTML += `<article class="card-wrapper col-sm-3">
-                                        <div class="card my-3">
+                    movies.innerHTML += `<article class="busqueda">
+                                        <div class="divbusqueda">
                                             <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">${info[i].title}</h5>
-                                                    <p class="card-text">${info[i].overview}</p>
+                                              
+    
                                                     <a href="moviedetail.html?id=${info[i].id}" class="btn btn-primary">Ver más</a>
-                                                </div>
+                                                
                                             </div>
                                         </article>`
                 } else if (info[i].media_type == "tv"){
-                    movies.innerHTML += `<article class="card-wrapper col-sm-3">
-                                        <div class="card my-3">
+                    movies.innerHTML += `<article class="busqueda">
+                                        <div class="divbusqueda">
                                             <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" class="card-img-top" alt="...">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">${info[i].original_name}</h5>
-                                                    <p class="card-text">${info[i].overview}</p>
+                                    
                                                     <a href="moviedetail.html?id=${info[i].id}" class="btn btn-primary">Ver más</a>
                                                 </div>
-                                            </div>
+                                         
                                         </article>`
                 } else {
-                    movies.innerHTML += `<article class="card-wrapper col-sm-3">
-                                    <div class="card my-3">
+                    movies.innerHTML += `<article class="busqueda">
+                                    <div class="divbusqueda">
                                         <img src="https://image.tmdb.org/t/p/w500${info[i].profile_path}" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h5 class="card-title">${info[i].name}</h5>
-                                                <p class="card-text"> Popularidad: ${info[i].popularity}</p>
+                                        
+                                              
                                                 <a href="moviedetail.html?id=${info[i].id}" class="btn btn-primary">Ver más</a>
-                                            </div>
+                                        
                                         </div>
                                     </article>`
                 }
             }
+        
 
         })
         .catch(function (error) {
             console.log(error);
         })
-}
+
+
 
 // window.addEventListener('load',function(){
 //             let spinner = docuent.querySelector('ruedita')

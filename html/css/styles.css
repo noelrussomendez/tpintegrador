@@ -95,12 +95,26 @@ nav {
 color: purple;
 }
 
-.card-wrapper {
+.busqueda {
     padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
 }
-.card.my-3 {
-grid-template-columns: repeat(2,2fr);
+.divbusqueda {
+display: grid;
+
 }
+.mr-2 {
+padding: 10px;
+text-align: justify;
+
+}
+ .botones{
+text-align: justify;
+ }
+
+
+
 /* Termina buscador */
 
 .main a {

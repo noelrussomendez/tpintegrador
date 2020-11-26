@@ -74,9 +74,7 @@ fetch(url)
             
         })
       })
-  
 
-    // Arreglar el hipervinculo a los generos
     
     .catch(function(error){
         console.log(error);
