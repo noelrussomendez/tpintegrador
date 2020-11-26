@@ -34,40 +34,32 @@
     <!--Main-->
 
     <!-- Buscador -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
    
-      <div class="buscador">
-            <form action="./busqueda.html" method="get" class="buscador">
-                <li>
-                    <div class="form-group my-4 text-center">
-                        <input type="text" name= "searchData" placeholder="Search..." value="" id="inputValue" class="searchfield">
-                        <button type="submit"><i class="buscar" id="search"></i>Buscar</button>
-
-                        <label for="all">Todos</label>
-                        <input type= "radio" name="mediaType" id="all" value="all" checked>
-
-                        <label for="tv">Películas</label>
-                        <input type= "radio" name="mediaType" id="all" value="all" checked>
-
-                        <label for="series">Series</label>
-                        <input type= "radio" name="mediaType" id="tv" value="tv" checked>
-
-                        <label for="person">Personas</label>
-                        <input type= "radio" name="mediaType" id="person" value="person" checked>
-                    </div>
-                    <p class="alert"></p>
-                </li>
-            </form>
+ <!--<form action="search-busqueda.html" method="get"> -->
+<form action="busqueda.html" method="get"> 
+    <div class="form-group my-4 text-center">
+        <input type="text" class="col-9" name="searchData" placeholder="Buscar..." value="">
+        <button type="submit" class="btn btn-success col-1">Buscar</button>
+        <small id="emailHelp" class="form-text text-muted"></small>
+        <div>
+            <!-- Radio button -->
+            <input type="radio" name="mediaType" id="all" value="all" checked>
+            <label class="mr-2" for="all">Todos</label>
+            <!-- Radio button -->
+            <input type="radio" name="mediaType" id="movie" value="movie" >
+            <label class="mr-2"for="movie">Películas</label>
+            <!-- Radio button -->
+            <input type="radio" name="mediaType" id="tv" value="tv" >
+            <label class="mr-2" for="tv">Series</label>
+            <!-- Radio button -->
+            <input type="radio" name="mediaType" id="person" value="person" >
+            <label class="mr-2" for="person">Personas</label>
         </div>
-    
-        <main>
-            <div class="container">
-                <div class="results">
-    
-                </div>
-            </div>
-        </main>
-    
+
+    </div>
+</form>
+
 
     <!--Carrusel-->
     <div id="carousel" class="carousel slide" data-ride="carousel">

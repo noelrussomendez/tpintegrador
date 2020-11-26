@@ -50,7 +50,7 @@ nav {
     box-sizing: border-box;
 }
         
-form.example input[type=text] {
+.form-group input[type=text] {
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
@@ -60,7 +60,7 @@ form.example input[type=text] {
     margin-bottom: 20px;
 }
         
-form.example button {
+.form-group button {
     float: left;
     width: 20%;
     padding: 10px;
@@ -72,16 +72,17 @@ form.example button {
     cursor: pointer;
 }
         
-form.example button:hover {
+.form-group button:hover {
     background: #0b7dda;
 }
         
 
-form.example::after {
+.form-group::after {
     content: "";
     clear: both;
     display: table;
 }
+
 
 /* Termina buscador */
 
