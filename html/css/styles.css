@@ -107,10 +107,11 @@ display: grid;
 .mr-2 {
 padding: 10px;
 text-align: justify;
-
 }
+
  .botones{
-text-align: justify;
+margin-top: 3%;
+text-align: center;
  }
 
  .ruedita {
@@ -118,8 +119,8 @@ text-align: justify;
     border: 16px solid #f3f3f3; /* Light grey */
     border-top: 16px solid #838383; /* Blue */
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     animation: spin 2s ;
    align-items: center;
    
