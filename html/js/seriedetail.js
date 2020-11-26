@@ -36,7 +36,10 @@ fetch(url)
         genero.innerHTML += ` <a href="./genresdetail.html?genres=${serie.genres[i].id}"> ${serie.genres[i].name} </a>`
 
         }
-       
+       let boton = document.querySelector('.SerieInfo');
+       boton.innerHTML += ` <button type="Agregar" class="favorito1">Favoritos</button> `
+
+
         let storage = localStorage.getItem('favoritos')
         console.log(storage);
         if (storage===null){
@@ -49,7 +52,7 @@ fetch(url)
         // Este if es para que cambie el texto el boton // 
         let storageJs =JSON.parse(storage)
         if (storageJs.includes(id)){
-          button.innerHTML = '<i class="removove"> </i> Quitar de favoritos'
+          button.innerHTML = '<i class="removove"> </i> Remove from favorites'
         }
         button.addEventListener('click', function(event){
           this.style.color="purple";
@@ -60,12 +63,12 @@ fetch(url)
             // este if es para que modifique // 
             if(!storageJs.includes(id)){
                 storageJs.push(id)
-                button.innerHTML = '<i class="removove"> </i> Quitar de favoritos'
+                button.innerHTML = '<i class="removove"> </i> Remove from favorites'
             }else{
                 storageJs = storageJs.filter (function(movie){
                     return movie != id
                 })
-                button.innerHTML = '<i class="removove"> </i> Favoritos'
+                button.innerHTML = '<i class="removove"> </i> Add to favorites'
             }
             localStorage.setItem('favoritos',JSON.stringify(storageJs))
             
