@@ -80,8 +80,12 @@ fetch(urlReview)
 
     for(let i=0; i<comentario.results.length; i++){
 
-        review.innerHTML += `<p> Reviews: ${comentario.results[i].content}</p>`
-        
+        if(comentario.results.content == "") {
+            review.innerHTML += `<p class="reviewTexto"> No reviews available </p>`
+        }
+        else {
+            review.innerHTML += `<p class="reviewTexto"> Review: ${comentario.results[i].content}</p>`
+        }
     }
 
 })

@@ -213,6 +213,12 @@ footer {
     text-align: start;
 }
 
+.reviewTexto {
+    font-size: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
 .foto {
     width: 70%;
     margin-top: 90px;
