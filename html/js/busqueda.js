@@ -38,7 +38,7 @@ if(mediaType == "movie"){
                                                 <a href="moviedetail.html?id=${info[i].id}" class="btn btn-primary">Ver más</a>
                                             </div>
                                         </div>
-                                    </article>`
+                                    </article>` 
             }
 
         })
@@ -50,7 +50,7 @@ if(mediaType == "movie"){
 
 if(mediaType == "tv"){
 
-    let url = `https://api.themoviedb.org/3/search/person?api_key=${apiKey}%3C%3Capi_key%3E%3E&language=en-US&page=1${searchData}&include_adult=false` //Viene de la API de TMDB
+    let url = `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&language=en-US&page=${searchData}1&include_adult=false` //Viene de la API de TMDB
 
     fetch(url)
         .then(function (respuestas) {
