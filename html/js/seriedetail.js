@@ -38,8 +38,6 @@ fetch(url)
         //  }
 
 
-
-
         let imagen = document.querySelector('.foto');
         imagen.src = `https://image.tmdb.org/t/p/w500${serie.poster_path}`;
 
@@ -55,18 +53,11 @@ fetch(url)
         let genero = document.querySelector('.textoSeries3');
 
         for (i=0;i<serie.genres.length; i++) {
-        genero.innerHTML += `Genero: <a href="./genresdetail.html?genres=${serie.genres[i].id}"> ${serie.genres[i].name} </a>`
+        genero.innerHTML += ` <a href="./genresdetail.html?genres=${serie.genres[i].id}"> ${serie.genres[i].name} </a>`
 
         }
 
        
-
-
-
-
-
-
-
         let storage = localStorage.getItem('favoritos')
             console.log(storage);
         

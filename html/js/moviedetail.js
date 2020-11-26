@@ -15,7 +15,7 @@ fetch(url)
 .then(function(movie){
     console.log(movie);
    
-    let movieDetail = document.querySelector('main');
+    let movieDetail = document.querySelector('.peliculas');
     console.log(movieDetail);
 
     
@@ -41,8 +41,8 @@ fetch(url)
                                   let button =document.querySelector('.favorito1')
                                   console.log(button);
                                   button.addEventListener('click', function(){
-                                    // this.style.color="purple";
-                                    // console.log(event);
+                                    this.style.color="purple";
+                                    console.log(event);
                                       
                                       let storageJs =JSON.parse(storage)
                                       if(!storageJs.includes(id)){
@@ -57,11 +57,35 @@ fetch(url)
                                   })
                                 })
 
-
-
-// Falta hacer el REVIEW
-
 .catch(function(error){
     console.log(error);
 })
 
+
+// REVIEW Corregir
+
+let urlReview = `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${apiKey}&language=en-US&page=1`;
+
+fetch(urlReview)
+
+.then (function(respuesta){
+    return respuesta.json()
+})
+
+.then(function(comentario){
+    // console.log(comentario);
+
+    let review = document.querySelector('.review');
+    // console.log(review);
+
+    for(let i=0; i<comentario.results.length; i++){
+
+        review.innerHTML += `<p> Reviews: ${comentario.results[i].content}</p>`
+        
+    }
+
+})
+
+.catch(function(error){
+    console.log(error);
+})
