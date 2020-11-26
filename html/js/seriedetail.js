@@ -37,7 +37,7 @@ fetch(url)
 
         }
        let boton = document.querySelector('.SerieInfo');
-       boton.innerHTML += ` <button type="Agregar" class="favorito1">Favoritos</button> `
+       boton.innerHTML += ` <button type="Agregar" class="favorito1">Favorites</button> `
 
 
         let storage = localStorage.getItem('favoritos')

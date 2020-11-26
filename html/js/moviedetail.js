@@ -25,7 +25,7 @@ fetch(url)
                                     <h2 class="tituloSeries">${movie.title}</h2>
                                     <p class="textoSeries"> ${movie.overview}</p>
                                     <p class="textoSeries"> Votes: ${movie.vote_average}</p>
-                                    <button type="Agregar" class="favorito1">Favoritos</button>
+                                    <button type="Agregar" class="favorito1">Favorites</button>
                                     </div>
 
                                   </article>`
