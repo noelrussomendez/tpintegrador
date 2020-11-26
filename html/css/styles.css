@@ -266,9 +266,9 @@ img.fotosDetalle {
     width: 150px;
 }
 /*Fvoritos*/
-.favoritos{
+.favorito{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 .imgfav{
     width: 50%;

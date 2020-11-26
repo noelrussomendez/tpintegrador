@@ -1,8 +1,6 @@
 let query = location.search;
 let queryString = new URLSearchParams(query);
-
 let id = queryString.get("id")
-
 let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b';
 let url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`;
 
@@ -28,7 +26,6 @@ fetch(url)
                                     <p class="textoSeries"> ${movie.overview}</p>
                                     <p class="textoSeries"> Votes: ${movie.vote_average}</p>
                                     <button type="Agregar" class="favorito1">Favoritos</button>
-                                    <button type="Quitar" class="view">Quitar de favoritos</button>
                                     </div>
 
                                   </article>`
@@ -38,19 +35,34 @@ fetch(url)
                                   if (storage===null){
                                       localStorage.setItem('favoritos', '[]')
                                   }
+
+            
                                   let button =document.querySelector('.favorito1')
                                   console.log(button);
-                                  button.addEventListener('click', function(){
+                                  // Este if es para que cambie el texto el boton // 
+                                  let storageJs =JSON.parse(storage)
+                                  if (storageJs.includes(id)){
+                                    button.innerHTML = '<i class="removove"> </i> Quitar de favoritos'
+                            
+                                   
+                                  }
+                                  button.addEventListener('click', function(event){
                                     this.style.color="purple";
                                     console.log(event);
-                                      
-                                      let storageJs =JSON.parse(storage)
+                                    
+                                    
+
+                                      // este if es para que modifique // 
                                       if(!storageJs.includes(id)){
                                           storageJs.push(id)
+                                          button.innerHTML = '<i class="removove"> </i> Quitar de favoritos'
+                                
+                                         
                                       }else{
                                           storageJs = storageJs.filter (function(movie){
                                               return movie != id
                                           })
+                                          button.innerHTML = '<i class="removove"> </i> Favoritos'
                                       }
                                       localStorage.setItem('favoritos',JSON.stringify(storageJs))
                                       
