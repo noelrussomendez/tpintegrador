@@ -11,6 +11,10 @@ let mediaType = queryObject.get('mediaType'); //Cambia segun la url
 
 let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b'
 
+window.addEventListener('load',function(){
+           let spinner = docuent.querySelector('ruedita')
+           spinner.style.display="none"
+      })
 
 if(mediaType == "movie"){
 
