@@ -50,7 +50,7 @@ if(mediaType == "movie"){
 
 if(mediaType == "tv"){
 
-    let url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${searchData}&page=1&include_adult=false` //Viene de la API de TMDB
+    let url = `https://api.themoviedb.org/3/search/person?api_key=${apiKey}%3C%3Capi_key%3E%3E&language=en-US&page=1${searchData}&include_adult=false` //Viene de la API de TMDB
 
     fetch(url)
         .then(function (respuestas) {
@@ -84,7 +84,7 @@ if(mediaType == "tv"){
 }
 
 if(mediaType == "person"){
-    //Completar
+    let url = `https://api.themoviedb.org/3/search/person?api_key=${apiKey}&language=en-US&page=${searchData}1&include_adult=false`
 }
 
 if(mediaType == "all"){
