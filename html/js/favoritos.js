@@ -35,10 +35,12 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=ca4449919efcaf3d7e435fc1
     console.log(respuesta);
     favoritos.innerHTML += ` <a href="./moviedetail.html?id=${respuesta.id}&media_type=movie"><img class="imgfav" src="https://image.tmdb.org/t/p/w500${respuesta.poster_path}" alt=""></a>`
 })
+
 .catch(function(error){    
     console.log(error);
     })
 
 
 })
+
 

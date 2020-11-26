@@ -146,3 +146,8 @@ if(mediaType == "all"){
             console.log(error);
         })
 }
+
+// window.addEventListener('load',function(){
+//             let spinner = docuent.querySelector('ruedita')
+//             spinner.style.display="none"
+//         })
