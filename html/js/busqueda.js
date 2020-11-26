@@ -57,6 +57,7 @@ if(mediaType == "tv"){
             return respuestas.json()
         })
         .then(function (data) {
+            
             //Aca operamos con los datos.
             console.log(data);
 

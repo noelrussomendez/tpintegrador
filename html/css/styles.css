@@ -87,6 +87,20 @@ nav {
     color: white;
 }
 
+.card-title {
+    color: white;
+}
+
+.btn.btn.btn-primary {
+color: purple;
+}
+
+.card-wrapper {
+    padding: 10px;
+}
+.card.my-3 {
+grid-template-columns: repeat(2,2fr);
+}
 /* Termina buscador */
 
 .main a {
