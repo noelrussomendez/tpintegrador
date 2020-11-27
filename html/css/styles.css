@@ -54,15 +54,13 @@ nav {
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
-    float: left;
     width: 80%;
     background: #f1f1f1;
     margin-bottom: 20px;
 }
         
 .form-group button {
-    float: left;
-    width: 20%;
+
     padding: 10px;
     background: purple;
     color: white;
@@ -110,20 +108,17 @@ text-align: justify;
 }
 
  .botones{
-margin-top: 3%;
 text-align: center;
  }
 
  .ruedita {
-     display: flex;
+    display:inline-block;
     border: 16px solid #f3f3f3; /* Light grey */
     border-top: 16px solid #838383; /* Blue */
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    animation: spin 2s ;
-   align-items: center;
-   
+    animation: spin 2s linear infinite;  
   }
   
   @keyframes spin {

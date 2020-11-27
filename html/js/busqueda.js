@@ -12,7 +12,7 @@ let mediaType = queryObject.get('mediaType'); //Cambia segun la url
 let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b'
 
 window.addEventListener('load',function(){
-           let spinner = docuent.querySelector('ruedita')
+           let spinner = document.querySelector('.ruedita')
            spinner.style.display="none"
       })
 
@@ -50,7 +50,7 @@ if(mediaType == "movie"){
 
 }
 
-else if(mediaType == "tv"){
+ if(mediaType == "tv"){
 
     let url = `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&language=en-US&page=${searchData}1&include_adult=false` //Viene de la API de TMDB
 
@@ -84,14 +84,14 @@ else if(mediaType == "tv"){
         })
 }
 
-else if(mediaType == "person"){
+if(mediaType == "person"){
     let url = `https://api.themoviedb.org/3/search/person?api_key=${apiKey}&language=en-US&page=${searchData}1&include_adult=false`
 }
 
-else(mediaType == "all")
+if(mediaType == "all"){
     //fetch a multisearch
 
-    let url = ` https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&query=${searchData}&page=1&include_adult=false` //Viene de la API de TMDB
+let url =`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&query=${searchData}&page=1&include_adult=false`//Viene de la API de TMDB
 
     fetch(url)
         .then(function (respuestas) {
@@ -144,7 +144,7 @@ else(mediaType == "all")
             console.log(error);
         })
 
-
+    }
 
 // window.addEventListener('load',function(){
 //             let spinner = docuent.querySelector('ruedita')

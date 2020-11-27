@@ -4,6 +4,10 @@ let urlTrending = `https://api.themoviedb.org/3/trending/movie/day?api_key=${api
 let urlSeries = `https://api.themoviedb.org/3/trending/tv/week?api_key=${apiKey}`
 let urlOriginal = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=vote_count.desc&certification_country=en-us&include_adult=false&include_video=false&page=1`
 
+window.addEventListener('load',function(){
+    let spinner = document.querySelector('.ruedita')
+    spinner.style.display="none"
+})
 
 //TRENDING
 //2 construir fetch con la url de datos que queremos mostrar en el html
