@@ -74,7 +74,7 @@ fetch(url)
 })
 
 
-// REVIEW Corregir
+// REVIEW // 
 
 let urlReview = `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${apiKey}&language=en-US&page=1`;
 
