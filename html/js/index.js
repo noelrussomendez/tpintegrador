@@ -1,4 +1,3 @@
-//1 construir la url (endpoint). url con APIKey
 let apiKey = 'ca4449919efcaf3d7e435fc10a0a0b0b'
 let urlTrending = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`
 let urlSeries = `https://api.themoviedb.org/3/trending/tv/week?api_key=${apiKey}`
@@ -10,7 +9,6 @@ window.addEventListener('load',function(){
 })
 
 //TRENDING
-//2 construir fetch con la url de datos que queremos mostrar en el html
 fetch(urlTrending) 
 
     .then (function(respuesta){
@@ -18,15 +16,12 @@ fetch(urlTrending)
     })
 
     .then(function(data){
-        //3. Identificar donde estaá la informacion
         console.log(data.results);
         let trending = data.results
 
-        //3.1 Capturar el destino a donde queremos mostrar los datos.
         let sectionTrending = document.querySelector('.estrenos');
         console.log(sectionTrending);
 
-        //4 Recorrer el array de datos reemplazando la inforamción estátiuca por la data variable.
         for(let i=0; i<trending.length; i++){
             sectionTrending.innerHTML += `<article class="media">
                                                 <img src="https://image.tmdb.org/t/p/w500/${trending[i].poster_path}" alt="reemplazar">
@@ -38,6 +33,7 @@ fetch(urlTrending)
     .catch(function(error){
         console.log(error)
     })
+
 
 // SERIES
  fetch(urlSeries) 
@@ -65,6 +61,7 @@ fetch(urlTrending)
         console.log(error)
     })
 
+    
 // ORIGINAL 
     fetch(urlOriginal) 
 
