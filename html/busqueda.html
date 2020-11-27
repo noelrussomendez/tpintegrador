@@ -20,30 +20,31 @@
     </nav>
     </header>
     <body>
-        <form action="busqueda.html" method="get">
-            <div class="form-group my-4 text-center">
-                <input type="text" class="col-9" name="searchData" placeholder="Buscar..." value="">
-                <button type="submit" class="btn btn-success col-1">Search</button>
-                <div class="ruedita">
-                
-                </div>
-                <div class="botones">
-                    <!-- Radio button -->
-                    <input type="radio" name="mediaType" id="all" value="all" checked>
-                    <label class="mr-2" for="all">All</label>
-                    <!-- Radio button -->
-                    <input type="radio" name="mediaType" id="movie" value="movie">
-                    <label class="mr-2" for="movie">Movies</label>
-                    <!-- Radio button -->
-                    <input type="radio" name="mediaType" id="tv" value="tv">
-                    <label class="mr-2" for="tv">TV/Series</label>
-                    <!-- Radio button -->
-                    <input type="radio" name="mediaType" id="person" value="person">
-                    <label class="mr-2" for="person">People</label>
-                </div>
-               
-            </form>
-
+    <form action="busqueda.html" method="get"> 
+        <div class="form-group my-4 text-center"> 
+            <input type="text" name="searchData" placeholder="Buscar..." value="">  
+            <button type="submit" class="btn btn-success">Search</button>
+            
+            <div class="botones">
+                <!-- Radio button -->
+                <input type="radio" name="mediaType" id="all" value="all" checked>
+                <label class="mr-2" for="all">All</label>
+                <!-- Radio button -->
+                <input type="radio" name="mediaType" id="movie" value="movie" >
+                <label class="mr-2"for="movie">Movies</label>
+                <!-- Radio button -->
+                <input type="radio" name="mediaType" id="tv" value="tv" >
+                <label class="mr-2" for="tv">TV/Series</label>
+                <!-- Radio button -->
+                <input type="radio" name="mediaType" id="person" value="person" >
+                <label class="mr-2" for="person">People</label>
+            </div>
+            <span class="ruedita">
+            </span>
+        </div>    
+        </form>
+    
+    
         <h2 class="alert alert-primary">Search results</h2>
         <section class="row movies">
             <!-- Las tarjetas vienen desde js -->
