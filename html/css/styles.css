@@ -126,6 +126,11 @@ text-align: center;
  }
 
 
+.card-img-top {
+    color: white;
+ }
+
+
  .ruedita {
     display:inline-block;
     border: 16px solid #f3f3f3; /* Light grey */
