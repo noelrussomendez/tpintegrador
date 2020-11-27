@@ -49,7 +49,13 @@ nav {
 * {
     box-sizing: border-box;
 }
-        
+
+section {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-left: 4%;
+}
+
 .form-group input[type=text] {
     padding: 10px;
     font-size: 17px;
@@ -89,8 +95,13 @@ nav {
     color: white;
 }
 
+.card-img-top {
+    width: 170px;
+}
+
 .btn.btn.btn-primary {
-color: purple;
+    color: purple;
+    margin-bottom: 20px;
 }
 
 .busqueda {
@@ -110,6 +121,7 @@ text-align: justify;
  .botones{
 text-align: center;
  }
+
 
  .ruedita {
     display:inline-block;
@@ -143,8 +155,9 @@ p {
 h2 {
     color: white !important;
     font-family: Georgia, 'Times New Roman', Times, serif !important;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 5%;
 }
 
 .principal {
@@ -310,7 +323,9 @@ img.fotosDetalle {
     margin-bottom: 10px;
     width: 150px;
 }
+
 /*Fvoritos*/
+
 .favorito{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -321,6 +336,7 @@ img.fotosDetalle {
     justify-content: center;
     margin: 5%;
 }
+
 
 /* Tablet */
 
