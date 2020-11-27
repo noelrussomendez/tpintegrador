@@ -32,7 +32,7 @@ fetch(url)
 
         let genero = document.querySelector('.textoSeries3');
 
-        for (let i=0;i<serie.genres.length; i++) {
+        for ( i=0;i<serie.genres.length; i++) {
         genero.innerHTML += ` <a href="./genresdetail.html?genres=${serie.genres[i].id}"> ${serie.genres[i].name} </a>`
 
         }
