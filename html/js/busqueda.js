@@ -152,7 +152,7 @@ if(mediaType == "all"){
                         <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" class="card-img-top" alt="No hay imagen disponible">
                            
                              
-                         <a href="moviedetail.html?id=${info[i].id}" class="btn btn-primary">Ver más</a>
+                         <a href="seriedetail.html?id=${info[i].id}" class="btn btn-primary">Ver más</a>
                           
                         </div>
                     </article>`
