@@ -84,7 +84,7 @@ if(mediaType == "tv"){
         })
 }
 
-if(mediaType == "person"){
+if(mediaType == "people"){
 
    let url =`https://api.themoviedb.org/3/search/person?api_key=${apiKey}&language=en-US&page=${searchData}1&include_adult=false`
    fetch(url)
